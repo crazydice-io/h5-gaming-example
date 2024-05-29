@@ -13,6 +13,7 @@ function App() {
   }
   let sdk = new CrazyDiceSDK(config)
   let login = async () => {
+    console.log('login===')
     const resp = await sdk.openLogin()
     console.log('login', resp)
   }
