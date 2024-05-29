@@ -12,16 +12,33 @@ function App() {
     env: 'development',
   }
   let sdk = new CrazyDiceSDK(config)
-  let login = async () => {
-    console.log('login===')
+
+  // 打开启钱包连接信息页面
+  const connect = async () => {
     const resp = await sdk.openLogin()
-    console.log('login', resp)
+    console.log('connect', resp)
+  }
+  // 获取账户信息
+  const getAccount = async () => {
+    const resp = await sdk.getAccount()
+    console.log('getAccount', resp)
+  }
+  // 获取余额
+  const getBalance = async () => {
+    const resp = await sdk.getBalance()
+    console.log('getBalance', resp)
   }
   return (
     <div className="App">
       <ul>
         <li>
-          <button onClick={login}>打开登录页面</button>
+          <button onClick={connect}>连接钱包/Connect Wallet</button>
+        </li>
+        <li>
+          <button onClick={getAccount}>获取账户信息/GetAccount</button>
+        </li>
+        <li>
+          <button onClick={getBalance}>获取余额</button>
         </li>
       </ul>
     </div>
