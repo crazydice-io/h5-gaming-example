@@ -30,7 +30,7 @@ function App() {
   }
   // 打开广告
   const openAD = async () => {
-    const resp = await sdk.openAD()
+    const resp = await sdk.openAD('reward')
     console.log('openAD', resp)
   }
   // 打开CrazyDice游戏内页面
