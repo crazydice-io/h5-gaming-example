@@ -6,6 +6,7 @@ function App() {
   const config: CrazyDiceSDKConfig = {
     appId: BigInt(1000000),
     name: 'Heart of the Brave',
+    key: 'HeartOfTheBrave',
     logo: '',
     gameLink: '',
     version: '1.0.0',
