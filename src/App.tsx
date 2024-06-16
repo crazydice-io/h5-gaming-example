@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { CrazyDiceSDKConfig, CrazyDiceSDK } from 'crazydice-sdk'
 import './App.css'
 
@@ -10,10 +10,10 @@ function App() {
     logo: '',
     gameLink: '',
     version: '1.0.0',
-    env: 'development',
+    env: 'sandbox',
+    // env: 'development',
   }
   let sdk = new CrazyDiceSDK(config)
-
   // 打开启钱包连接信息页面
   const connect = async () => {
     const resp = await sdk.openLogin()
@@ -36,7 +36,7 @@ function App() {
   }
   // 打开CrazyDice游戏内页面
   const openCrazyDice = async () => {
-    const resp = await sdk.openCrazyDice()
+    const resp = await sdk.openCrazyDice(tokenId)
     console.log('openCrazyDice', resp)
   }
   // 购买产品支付
@@ -48,7 +48,11 @@ function App() {
   const getGameCharacter = async () => {
     const resp = await sdk.getGameCharacter()
     console.log('getGameCharacter', resp)
+    if (resp.payload?.code === 0) {
+      setTokenId(resp.payload?.data.charcaterId)
+    }
   }
+  const [tokenId, setTokenId] = useState<string>('')
   return (
     <div className="App">
       <ul>
