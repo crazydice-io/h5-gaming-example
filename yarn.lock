@@ -3468,6 +3468,13 @@ cosmiconfig@^7.0.0:
     path-type "^4.0.0"
     yaml "^1.10.0"
 
+crazydice-sdk@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.npmjs.org/crazydice-sdk/-/crazydice-sdk-1.0.3.tgz#6aa7a817558f9546739dfecac76d5084db0c998f"
+  integrity sha512-sVKlwTlJvwhIZRo1CNLoBxmgR9A/YMbLesbB744YfKbA7fiKc16pYoxDQOhxaRFYHklwvHroglrGVQBmj7Oruw==
+  dependencies:
+    snowflake-uuid "^1.0.0"
+
 cross-spawn@^7.0.0, cross-spawn@^7.0.2, cross-spawn@^7.0.3:
   version "7.0.3"
   resolved "https://registry.npmmirror.com/cross-spawn/-/cross-spawn-7.0.3.tgz#f73a85b9d5d41d045551c177e2882d4ac85728a6"
@@ -8519,6 +8526,11 @@ slash@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmmirror.com/slash/-/slash-4.0.0.tgz#2422372176c4c6c5addb5e2ada885af984b396a7"
   integrity sha512-3dOsAHXXUkQTpOYcoAxLIorMTp4gIQr5IW3iVb7A7lFIp0VHhnynm9izx6TssdrIcVIESAlVjtnO2K8bg+Coew==
+
+snowflake-uuid@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/snowflake-uuid/-/snowflake-uuid-1.0.0.tgz#b656c89f7e9c9660a64d7a2977e627b1556f4a71"
+  integrity sha512-Y8Wj4ota0NgqXm2mhQ+lIWQQbUekkZYVlwXDGMmOpEhH4BfNVnCfDTqboeo0N+BFBN2FhRSaUWXLZBk4ngiImA==
 
 sockjs@^0.3.24:
   version "0.3.24"
